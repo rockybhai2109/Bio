@@ -88,7 +88,7 @@ async def back_home_cb(client, callback_query):
     await start_message(client, callback_query.message)  # Re-use existing /start handler
 
 
-@bot.on_message(filters.command("help"))
+@Client.on_message(filters.command("help"))
 async def help_command(bot, message: Message):
     help_text = (
         "📖 How to Get Approved:\n\n"
