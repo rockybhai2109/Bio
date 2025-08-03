@@ -65,9 +65,13 @@ class Bot(Client):
 
         print(f'Bot Started as {self.username} 🚀')
 
-    async def stop(self, *args):
-        await super().stop()
-        print('Bot Stopped. Bye 👋')
+        # ✅ Send bot started message to admin
+        admin_id = int(os.environ.get("OWNER_ID", 6947378236))  # Replace or set in .env
+        try:
+            await self.send_message(admin_id, f"🤖 <b>Bot Started Successfully</b> as {self.username}")
+        except Exception as e:
+            print(f"⚠️ Failed to send start message to admin: {e}")
+
 
 # Run the bot
 Bot().run()
