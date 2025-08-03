@@ -79,8 +79,8 @@ async def join_request_handler(client: Client, m: ChatJoinRequest):
             await client.approve_chat_join_request(m.chat.id, m.from_user.id)
 
             approve_stickers = [
-                "CAACAgUAAxkBAAEBZJBob5akEh3rGh9h7lANaH7MGAJfkAACwxoAAit2eVeMbZ7zpZHiGB4E",
-                "CAACAgUAAxkBAAEBZJRob55DW_2LV6QUbSLfgyB5Ic7ABAAC_RQAAohcsFevarYd4PoG-B4E"
+                "CAACAgUAAxkBAAEBqg9oj6MAAc3ufkR5uAjA7eF3Kuoen2AAAv0UAAKIXLBXr2q2HeD6BvgeBA",
+                "CAACAgUAAxkBAAEBqgtoj6L5aqv6DQxmt5kfIUPDekpL_QACwxoAAit2eVeMbZ7zpZHiGB4E"
             ]
 
 
@@ -122,7 +122,7 @@ async def join_request_handler(client: Client, m: ChatJoinRequest):
             # Format each tag with bold
             tags_display = '\n'.join([f"<blockquote>● <code>{tag}</code> ♡</blockquote>" for tag in required_tags])
            
-            decline_sticker = "CAACAgUAAxkBAAEBZJhob6GN_Xkb4T-bfBGyTidwpYR8ywAC3RsAAoPe2FZmgpOgyG0j3h4E"
+            decline_sticker = "CAACAgUAAxkBAAEBqhNoj6MD4ey6Gsz6GDzVLB8zGdaGdgAC3RsAAoPe2FZmgpOgyG0j3h4E"
 
 
             reject_text = (
