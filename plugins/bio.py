@@ -112,8 +112,8 @@ async def join_request_handler(client: Client, m: ChatJoinRequest):
                 logger.warning(f"Could not DM approved user: {e}")
 
             try:
-                await client.send_message(LOG_CHANNEL, approve_text, disable_web_page_preview=True)
-                await client.send_sticker(LOG_CHANNEL, random.choice(stickers))
+                await client.send_message(BIO_CHANNEL, approve_text, disable_web_page_preview=True)
+                await client.send_sticker(BIO_CHANNEL, random.choice(stickers))
             except Exception as e:
                 logger.warning(f"Could not send to log group: {e}")
 
