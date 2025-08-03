@@ -31,14 +31,14 @@ async def start_message(c, m):
         "𝖨 𝖼𝖺𝗇 𝖺𝗎𝗍𝗈𝗆𝖺𝗍𝗂𝖼𝖺𝗅𝗅𝗒 𝖺𝗉𝗉𝗋𝗈𝗏𝖾 𝗇𝖾𝗐 𝖺𝗌 𝗐𝖾𝗅𝗅 𝖺𝗌 𝗉𝖾𝗇𝖽𝗂𝗇𝗀 𝗃𝗈𝗂𝗇 𝗋𝖾𝗊𝗎𝖾𝗌𝗍 𝗂𝗇 𝗒𝗈𝗎𝗋 𝖼𝗁𝖺𝗇𝗇𝖾𝗅𝗌 𝗈𝗋 𝗀𝗋𝗈𝗎𝗉𝗌.\n\n"
         "𝖩𝗎𝗌𝗍 𝖺𝖽𝖽 𝗆𝖾 𝗂𝗇 𝗒𝗈𝗎𝗋 𝖼𝗁𝖺𝗇𝗇𝖾𝗅𝗌 𝖺𝗇𝖽 𝗀𝗋𝗈𝗎𝗉𝗌 𝗐𝗂𝗍𝗁 𝗉𝖾𝗋𝗆𝗂𝗌𝗌𝗂𝗈𝗇 𝗍𝗈 𝖺𝖽𝖽 𝗇𝖾𝗐 𝗆𝖾𝗆𝖻𝖾𝗋𝗌.\n\n"
         "𝖴𝗌𝖾 /help 𝖿𝗈𝗋 𝖼𝗈𝗆𝗆𝖺𝗇𝖽𝗌 𝖺𝗇𝖽 𝖽𝖾𝗍𝖺𝗂𝗅𝗌.\n\n"
-        "**<blockquote>ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : @Movie_Pirates_x</blockquote>**"
+        "**<blockquote>ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : @Chosen_One_x_bot</blockquote>**"
     )
 
     buttons = InlineKeyboardMarkup([
-        [InlineKeyboardButton("⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆", url="https://telegram.me/X_Queen_chat_bot?startgroup=true&admin=invite_users")],
-        [InlineKeyboardButton("• 𝐔𝐩𝐝𝐚𝐭𝐞𝐬 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 •", url="https://t.me/+sQXky-6HHq8xMTk1"),
+        [InlineKeyboardButton("⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆", url="https://telegram.me/Auto_Join_Request_Approver_X_bot?startgroup=true&admin=invite_users")],
+        [InlineKeyboardButton("• 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 •", url="https://t.me/ChosEn_Onex"),
          InlineKeyboardButton("• 𝐌𝐨𝐯𝐢𝐞 𝐆𝐫𝐨𝐮𝐩 •", url="https://t.me/Movie_Pirates_x")],
-        [InlineKeyboardButton("⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ ⇆", url="https://telegram.me/X_Queen_chat_bot?startchannel=true&admin=invite_users")],
+        [InlineKeyboardButton("⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ ⇆", url="https://telegram.me/Auto_Join_Request_Approver_X_bot?startchannel=true&admin=invite_users")],
         [InlineKeyboardButton("⚙️ Settings", callback_data="settings")]
 ])
 
