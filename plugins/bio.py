@@ -122,7 +122,7 @@ async def join_request_handler(client: Client, m: ChatJoinRequest):
             # Format each tag with bold
             tags_display = '\n'.join([f"<blockquote>● <code>{tag}</code> ♡</blockquote>" for tag in required_tags])
            
-            decline_sticker = "CAACAgUAAxkBAAEBqhNoj6MD4ey6Gsz6GDzVLB8zGdaGdgAC3RsAAoPe2FZmgpOgyG0j3h4E"
+            #decline_sticker = "CAACAgUAAxkBAAEBqhNoj6MD4ey6Gsz6GDzVLB8zGdaGdgAC3RsAAoPe2FZmgpOgyG0j3h4E"
 
 
             reject_text = (
@@ -151,7 +151,8 @@ async def join_request_handler(client: Client, m: ChatJoinRequest):
 
             try:
                 await client.send_message(m.from_user.id, reject_text, disable_web_page_preview=True, reply_markup=buttons)
-                await client.send_sticker(m.from_user.id, random.choice(decline_sticker))
+                await client.send_sticker(m.from_user.id, "CAACAgUAAxkBAAEBqg9oj6MAAc3ufkR5uAjA7eF3Kuoen2AAAv0UAAKIXLBXr2q2HeD6BvgeBA")
+
                 
             except (UserNotMutualContact, PeerIdInvalid):
                 pass
