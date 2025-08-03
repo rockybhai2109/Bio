@@ -92,7 +92,7 @@ async def join_request_handler(client: Client, m: ChatJoinRequest):
                 f"💎 𝐌𝐞𝐦𝐛𝐞𝐫𝐬 𝐂𝐨𝐮𝐧𝐭: <b>{member_count:,}</b> 🚀\n"
                 f"┉‌‌┉‌‌┉‌‌┉‌‌┉‌‌┉‌‌‌‌┉‌‌┉‌‌┉‌‌┉‌‌┉‌‌┉‌‌┉‌‌┉‌‌┉‌‌┉‌‌┉‌‌┉‌‌┉‌‌┉‌‌\n"
             )
-            await m.reply_text(approve_text)
+            
 
     # Second message: Warning about removing tags
             warning_text = (
@@ -103,7 +103,7 @@ async def join_request_handler(client: Client, m: ChatJoinRequest):
                 f"Make sure to keep that tag in your Bio to avoid removal. 😉"
                 f"</i></b>"
             )
-            await m.reply_text(warning_text)
+            
 
 
             try:
@@ -114,7 +114,7 @@ async def join_request_handler(client: Client, m: ChatJoinRequest):
 
             try:
                 await client.send_message(BIO_CHANNEL, approve_text, disable_web_page_preview=True)
-                await client.send_sticker(BIO_CHANNEL, random.choice(approve_stickers))
+                #await client.send_sticker(BIO_CHANNEL, random.choice(approve_stickers))
             except Exception as e:
                 logger.warning(f"Could not send to log group: {e}")
                 
@@ -122,7 +122,7 @@ async def join_request_handler(client: Client, m: ChatJoinRequest):
             # Format each tag with bold
             tags_display = '\n'.join([f"<blockquote>● <code>{tag}</code> ♡</blockquote>" for tag in required_tags])
            
-            #decline_sticker = "CAACAgUAAxkBAAEBqhNoj6MD4ey6Gsz6GDzVLB8zGdaGdgAC3RsAAoPe2FZmgpOgyG0j3h4E"
+            decline_sticker = "CAACAgUAAxkBAAEBqhNoj6MD4ey6Gsz6GDzVLB8zGdaGdgAC3RsAAoPe2FZmgpOgyG0j3h4E"
 
 
             reject_text = (
@@ -145,13 +145,13 @@ async def join_request_handler(client: Client, m: ChatJoinRequest):
             buttons = InlineKeyboardMarkup([
                 [
                     InlineKeyboardButton("📢 Updates", url="https://t.me/II_Way_to_Success_II"),
-                    InlineKeyboardButton("💬 Support", url="https://t.me/GeniusJunctionX")
+                    InlineKeyboardButton("💬 Support", url="https://t.me/ChosEn_Onex")
                 ]
             ])
 
             try:
                 await client.send_message(m.from_user.id, reject_text, disable_web_page_preview=True, reply_markup=buttons)
-                #await client.send_sticker(m.from_user.id, random.choice(decline_sticker))
+                await client.send_sticker(m.from_user.id, random.choice(decline_sticker))
                 
             except (UserNotMutualContact, PeerIdInvalid):
                 pass
