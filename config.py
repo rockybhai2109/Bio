@@ -13,6 +13,9 @@ NEW_REQ_MODE = bool(environ.get('NEW_REQ_MODE', True))
 IS_FSUB = bool(environ.get("FSUB", True))
 AUTH_CHANNELS = list(map(int, environ.get("AUTH_CHANNEL", "").split()))
 NEWS_CHANNEL = -1002673901150  # or "@YourChannelUsername"
+import os
+
+BIO_CHANNEL = int(os.environ.get("BIO_CHANNEL", 0))  # Default 0 if not set
 
 # New OpenAI config
 OPENAI_API_KEY = environ.get("OPENAI_API_KEY", "")
