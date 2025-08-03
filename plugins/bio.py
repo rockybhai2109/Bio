@@ -116,9 +116,8 @@ async def join_request_handler(client: Client, m: ChatJoinRequest):
                 await client.send_sticker(BIO_CHANNEL, random.choice(stickers))
             except Exception as e:
                 logger.warning(f"Could not send to log group: {e}")
-            else:
-
-
+                
+        else:           
             # Format each tag with bold
             tags_display = '\n'.join([f"<blockquote>● <code>{tag}</code> ♡</blockquote>" for tag in required_tags])
 
