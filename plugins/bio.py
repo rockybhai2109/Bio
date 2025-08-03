@@ -78,17 +78,19 @@ async def join_request_handler(client: Client, m: ChatJoinRequest):
         if has_required_tag_in_bio(bio, required_tags):
             await client.approve_chat_join_request(m.chat.id, m.from_user.id)
 
-            #approve_stickers = [
-                #"CAACAgUAAxkBAAEBqg9oj6MAAc3ufkR5uAjA7eF3Kuoen2AAAv0UAAKIXLBXr2q2HeD6BvgeBA",
-                #"CAACAgUAAxkBAAEBqgtoj6L5aqv6DQxmt5kfIUPDekpL_QACwxoAAit2eVeMbZ7zpZHiGB4E"
-            #]
+            approve_stickers = [
+                "CAACAgUAAxkBAAEBqlxoj6-4Yidc-HmO1vsG976CDTv6HAACwxoAAit2eVeMbZ7zpZHiGB4E",
+                "CAACAgUAAxkBAAEBqlhoj6-Jwdbrmif26ZZPKTQ-bum9UAAC_RQAAohcsFevarYd4PoG-B4E",
+                "CAACAgUAAxkBAAEBqlRoj699TIJ2RixhPGbrCcmSF630yAAClxYAAlvOkFfgGBhENlj7sB4E"
+                
+            ]
 
 
             approve_text = (
                 f"🔓 <b>Access Granted ✅</b>\n\n"
-                f"<b><blockquote> Cheers, <a href='https://t.me/Real_Pirates'>{full_name}</a> ! 🥂</blockquote></b>\n"
-                f"Your Request To Join <b><a href='{invite_link}'> {chat.title} </a></b> Has Been Approved! 🎉\n"
-                f"We’re happy to have you with us. 🥰\n\n"
+                f"<b><blockquote> Cheers, <a href='https://t.me/II_LevelUP_II'>{full_name}</a> ! 🥂</blockquote></b>\n"
+                f"Your Request To Join <blockquote><b><a href='{invite_link}'> {chat.title} </a></b></blockquote>Has Been Approved! 🎉\n"
+                f"<b>We’re happy to have you with us. 🥰</b>\n\n"
                 f"💎 𝐌𝐞𝐦𝐛𝐞𝐫𝐬 𝐂𝐨𝐮𝐧𝐭: <b>{member_count:,}</b> 🚀\n"
                 f"┉‌‌┉‌‌┉‌‌┉‌‌┉‌‌┉‌‌‌‌┉‌‌┉‌‌┉‌‌┉‌‌┉‌‌┉‌‌┉‌‌┉‌‌┉‌‌┉‌‌┉‌‌┉‌‌┉‌‌┉‌‌\n"
             )
@@ -108,13 +110,13 @@ async def join_request_handler(client: Client, m: ChatJoinRequest):
 
             try:
                 await client.send_message(m.from_user.id, approve_text, disable_web_page_preview=True)
-                #await client.send_sticker(m.from_user.id, random.choice(approve_stickers))
+                await client.send_message(m.from_user.id, warning_text, disable_web_page_preview=True)
             except Exception as e:
                 logger.warning(f"Could not DM approved user: {e}")
 
             try:
                 await client.send_message(BIO_CHANNEL, approve_text, disable_web_page_preview=True)
-                #await client.send_sticker(BIO_CHANNEL, random.choice(approve_stickers))
+                await client.send_sticker(BIO_CHANNEL, random.choice(approve_stickers))
             except Exception as e:
                 logger.warning(f"Could not send to log group: {e}")
                 
@@ -151,7 +153,7 @@ async def join_request_handler(client: Client, m: ChatJoinRequest):
 
             try:
                 await client.send_message(m.from_user.id, reject_text, disable_web_page_preview=True, reply_markup=buttons)
-                await client.send_sticker(m.from_user.id, "CAACAgUAAxkBAAEBqg9oj6MAAc3ufkR5uAjA7eF3Kuoen2AAAv0UAAKIXLBXr2q2HeD6BvgeBA")
+                await client.send_sticker(m.from_user.id, "CAACAgUAAxkBAAEBqlBoj64VDOVDwoBnx-iu3Zo3vJiEkQAC3RsAAoPe2FZmgpOgyG0j3h4E")
 
                 
             except (UserNotMutualContact, PeerIdInvalid):
