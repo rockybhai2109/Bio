@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 # Updated TAG MAP with multiple tags for #study
 TAG_MAP = {
-    "#movie": ["@real_pirates", "@drama_loverx"],
+    "#movie": ["@real_piratex"],
     "#drama": ["@drama_loverx"],
     "#study": ["@II_LevelUP_II"],
     "#success": ["@ii_way_to_success_ii"],
